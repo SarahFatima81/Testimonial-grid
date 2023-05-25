@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  line-height: 1.2;
+  background-color: hsl(210, 46%, 95%);
+  font-size: 0.8rem;
+}
+main {
+  width: min(95%, 68.75rem);
+  margin: 3.125rem auto;
+  display: grid;
+  padding-block: 2rem;
+  /* margin-inline: auto; */
+  gap: 1.875rem;
+  color: hsl(0, 0%, 100%);
+}
+.grid-col-span-2 {
+  grid-column: span 2;
+}
+.testimonial {
+  padding: 2rem;
+  border-radius: 0.625rem;
+}
+.profile-info {
+  display: flex;
+  gap: 1.25rem;
+}
+
+img {
+  border-radius: 50%;
+  width: 1.875rem;
+  height: 1.875rem;
+}
+.quote {
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 20%;
+}
+
+h3 {
+  font-size: 1.22rem;
+  margin-top: 0.938rem;
+  margin-bottom: 0.938rem;
+}
+.t-1 {
+  background-color: hsl(263, 55%, 52%);
+  color: hsl(0, 0%, 100%);
+}
+
+p {
+  color: hsla(210, 46%, 95%, 0.568);
+  line-height: 1.5;
+}
+
+.t-2 {
+  background-color: hsl(217, 19%, 35%);
+}
+.t-4 {
+  background-color: hsl(219, 29%, 14%);
+}
+.t-3 {
+  color: hsl(217, 19%, 35%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.t-5 {
+  color: hsl(217, 19%, 35%);
+  background-color: hsl(0, 0%, 100%);
+}
+.p-t-3,
+.p-t-5 {
+  color: hsla(217, 19%, 35%, 0.658);
+  margin-top: 1.563rem;
+}
+
+.h-t-4 {
+  margin-bottom: 1.875rem;
+}
+
+.t-name {
+  color: hsl(0, 0%, 100%);
+}
+.t-name-bg-white {
+  color: hsl(217, 19%, 35%);
+}
+.t-title {
+  font-size: 0.69rem;
+}
+.tt-3,
+.tt-5 {
+  color: hsla(217, 19%, 35%, 0.5);
+}
+@media (min-width: 60em) {
+  main {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .t-5 {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+  }
+}
+
+@media (max-width: 32em) {
+  main {
+    width: min(86.3%, 68.75rem);
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    grid-template-rows: minmax(auto, auto);
+  }
+  .testimonial {
+    grid-column: unset;
+    grid-row: unset;
+    padding-right: 3rem;
+  }
+}
